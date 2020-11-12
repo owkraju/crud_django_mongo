@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<h1 align="center">Add page</h1>
+<hr>
+<p align="center"><a href="{%url 'crud_app:home'%}">Home</a></p>
+<form action="" method="POST">
+{%csrf_token%}
+<input type="text" name="name">
+<input type="submit" value="submit">
+</form>
+{%endblock%}

@@ -1,0 +1,10 @@
+{% extends 'base.html'%}
+
+{%block content%}
+<h1>Update page</h1>
+<form action="/update/{{data.name}}/" method="POST">
+{%csrf_token%}
+<input type="text" name=name value={{data.name}}>
+<input type="submit" value="submit">
+</form>
+{%endblock%}
